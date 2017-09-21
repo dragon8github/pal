@@ -1,6 +1,9 @@
 {
   "name": "h5pal",
   "version": "0.1.0",
+  "scripts": {
+    "git": "git add . && git commit -m '123' && git push -u origin master"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:LiuJi-Jim/h5pal.git"

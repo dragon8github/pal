@@ -57,7 +57,7 @@ uigame.openingMenu = function*() {
     return 0;
   // 如果用户选择【旧的回忆】
   } else {
-    // TODO： 这一句有Bug导致无法读取存档
+    // 开启存档UI以及相关逻辑，等待用户操作
     var slmenu = yield uigame.saveSlotMenu(1);
     if (slmenu === ui.MENUITEM_VALUE_CANCELLED) {
       return 1;
@@ -104,9 +104,10 @@ uigame.saveSlotMenu = function*(defaultSlot) {
     boxes[i].free();
   }
 
-  debugger;
+  // 重新渲染UI
   surface.updateScreen(rect);
 
+  // 返回的时候会出现错误
   return slot;
 };
 
